@@ -1,0 +1,102 @@
+@import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+.banglatext{
+  font-family: "Anek Bangla", "Sora", sans-serif;;
+}
+
+.headingsTop {
+  background: linear-gradient(270deg, #6A3DC5, #331D5F);
+  display: flex;
+  justify-content: center;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+  background: linear-gradient(to top, white, white);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #6A3DC5);
+  border-radius: 30px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease; /* Add transition */
+  opacity: 1;
+  max-height: 500px;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+
+.navbar-toggler {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  margin-left: 250px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0; /* Hidden by default */
+      max-height: 0; /* Hidden by default */
+      overflow: hidden;
+  }
+
+  .navbar-menu li {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar.active .navbar-menu {
+      opacity: 1; /* Show the menu */
+      max-height: 500px; /* Enough to fully show the menu */
+  }
+}
